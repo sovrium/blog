@@ -1,0 +1,28 @@
+id: 1
+name: authors
+# Public bylines. Anyone can read them; only admins manage the roster.
+permissions:
+  read: all
+  create:
+    - admin
+  update:
+    - admin
+  delete:
+    - admin
+fields:
+  - id: 1
+    name: name
+    type: single-line-text
+    required: true
+  - id: 2
+    name: slug
+    type: single-line-text
+    required: true
+    unique: true
+    indexed: true
+  - id: 3
+    name: bio
+    type: long-text
+  - id: 4
+    name: avatar
+    type: single-attachment
